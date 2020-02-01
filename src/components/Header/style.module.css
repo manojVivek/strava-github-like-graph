@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  max-width: calc(100% - 100px);
+  align-items: center;
+  margin: 10px auto 100px;
+}
+
+.logoImage {
+  height: 100px;
+}
