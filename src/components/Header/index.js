@@ -6,7 +6,11 @@ import logo from '../../assets/logo.png';
 export default function Header() {
   return (
     <div className={cx(styles.header)}>
-      <img src={logo} className={cx(styles.logoImage)} />
+      <img
+        src={logo}
+        className={cx(styles.logoImage)}
+        alt="Strava-Github-Like-Graph"
+      />
     </div>
   );
 }

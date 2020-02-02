@@ -16,7 +16,7 @@ export default function WelcomeMessage() {
         Authorize
       </Title>
       <Text strong className="height-200">
-        App needs to access your Strava activies to show the graph, continue and
+        App needs access to your Strava activies to show the graph, continue and
         authorize with your strava account to proceed.
       </Text>
       <Button

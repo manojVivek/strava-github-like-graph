@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
-import {Icon} from 'antd';
-import {completeAuthentication} from '../../commons/stravaClient';
+import {completeAuthentication} from '../../commons/strava-utils';
+import Spinner from '../Spinner';
 
 export default function AuthCallback(props) {
   const history = useHistory();
@@ -12,14 +12,7 @@ export default function AuthCallback(props) {
       await completeAuthentication(params.get('code'));
       history.push('/');
     })();
-  }, []);
+  }, [history]);
 
-  return (
-    <Icon
-      className="theme-color align-center"
-      type="loading-3-quarters"
-      spin
-      style={{fontSize: '30px'}}
-    />
-  );
+  return <Spinner />;
 }
