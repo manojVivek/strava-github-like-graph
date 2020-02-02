@@ -40,6 +40,12 @@ code {
 
 .ant-steps-item-finish
   > .ant-steps-item-container
+  > .ant-steps-item-tail:after {
+  background-color: #e34402;
+}
+
+.ant-steps-item-finish
+  > .ant-steps-item-container
   > .ant-steps-item-content
   > .ant-steps-item-title:after {
   color: #e34402;

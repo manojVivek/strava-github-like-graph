@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import AuthCallback from './components/AuthCallback';
 import InitAuth from './components/InitAuth';
-import ActivityGraph from './components/ActivityGraph';
 import Header from './components/Header';
+import WorkflowController from './components/WorkflowController';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <InitAuth />
           </Route>
           <Route path="/">
-            <ActivityGraph />
+            <WorkflowController />
           </Route>
         </Switch>
       </Router>

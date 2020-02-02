@@ -1,0 +1,18 @@
+.graphContainer {
+  width: 624px;
+  height: 84px;
+}
+
+.graph {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 84px;
+  width: 624px;
+}
+
+.monthRunner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
