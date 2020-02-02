@@ -1,8 +1,8 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 import cx from 'classnames';
-import {Typography} from 'antd';
-import {Button} from 'antd';
+import Typography from 'antd/es/typography';
+import Button from 'antd/es/button';
 
 import styles from './styles.module.css';
 

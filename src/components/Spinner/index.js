@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'antd';
+import Icon from 'antd/es/icon';
 
 export default function Spinner(props) {
   return (

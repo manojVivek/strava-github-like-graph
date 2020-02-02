@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import cx from 'classnames';
 import Spinner from '../Spinner';
-import {Typography} from 'antd';
+import Typography from 'antd/es/typography';
 
 import styles from './styles.module.css';
 import {processActivitiesData} from '../../commons/strava-utils';

@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {Tooltip} from 'antd';
+import Tooltip from 'antd/es/tooltip';
 
 import styles from './styles.module.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import GraphNode from './GraphNode';
-import {Typography} from 'antd';
+import Typography from 'antd/es/typography';
 import MonthNode from './MonthNode';
 
 import styles from './styles.module.css';

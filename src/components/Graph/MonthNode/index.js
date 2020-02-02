@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {Typography} from 'antd';
+import Typography from 'antd/es/typography';
 
 import styles from './styles.module.css';
 

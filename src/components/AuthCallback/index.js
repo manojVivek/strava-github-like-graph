@@ -8,9 +8,8 @@ export default function AuthCallback(props) {
   useEffect(() => {
     (async () => {
       const params = new URLSearchParams(window.location.search);
-      console.log('params, location.search', params, window.location.search);
       await completeAuthentication(params.get('code'));
-      history.push('/');
+      history.push(process.env.PUBLIC_URL);
     })();
   }, [history]);
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Steps, Icon} from 'antd';
+import Steps from 'antd/es/steps';
+import Icon from 'antd/es/icon';
 
 const {Step} = Steps;
 
