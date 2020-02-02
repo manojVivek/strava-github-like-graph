@@ -1,6 +1,15 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  border-radius: 4px;
+  margin: 50px auto;
+}
+
 .graphContainer {
-  width: 624px;
-  height: 84px;
+  padding: 30px 50px;
+  border: 1px solid darkgrey;
 }
 
 .graph {
@@ -12,6 +21,7 @@
 }
 
 .monthRunner {
+  width: 624px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

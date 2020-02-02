@@ -9,7 +9,6 @@ import styles from './styles.module.css';
 const {Text} = Typography;
 
 export default function Graph({data}) {
-  console.log('data', data);
   const days = Object.keys(data).reverse();
   const monthRunner = new Date(days[0]);
   const months = Array.from(Array(12)).map(() => {
@@ -27,17 +26,21 @@ export default function Graph({data}) {
   );
   return (
     <>
-      <Text>{activitiesCount} activities in the last year</Text>
-      <div className={cx(styles.graphContainer)}>
-        <div className={cx(styles.monthRunner)}>
-          {months.map(month => (
-            <MonthNode month={month} />
-          ))}
+      <div className={cx(styles.container, 'top-space-medium')}>
+        <div>
+          <Text>{activitiesCount} activities in the last year</Text>
         </div>
-        <div className={cx(styles.graph)}>
-          {days.map(day => (
-            <GraphNode {...data[day]} key={day} day={day} />
-          ))}
+        <div className={cx(styles.graphContainer)}>
+          <div className={cx(styles.monthRunner)}>
+            {months.map(month => (
+              <MonthNode month={month} />
+            ))}
+          </div>
+          <div className={cx(styles.graph)}>
+            {days.map(day => (
+              <GraphNode {...data[day]} key={day} day={day} />
+            ))}
+          </div>
         </div>
       </div>
     </>

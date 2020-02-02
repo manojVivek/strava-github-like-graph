@@ -2,6 +2,7 @@ import Strava from 'strava-v3';
 
 let _athlete = null;
 let userClient = null;
+let graphData = null;
 
 Strava.config({
   client_id: process.env.REACT_APP_STRAVA_CLIENT_ID,
@@ -30,7 +31,7 @@ export async function completeAuthentication(code) {
 }
 
 export async function processActivitiesData() {
-  const per_page = 10;
+  const per_page = 50;
   const before = Math.floor(new Date().getTime() / 1000);
   const after =
     before - 60 /*secs*/ * 60 /*mins*/ * 24 /* hours*/ * 365; /*days*/
@@ -47,8 +48,11 @@ export async function processActivitiesData() {
     allActivities = [...allActivities, ...currentBatch];
     page++;
   } while (currentBatch.length === per_page);
-  console.log('allAcitivties', allActivities);
-  computeGraphData(allActivities, before, after);
+  graphData = computeGraphData(allActivities, before, after);
+}
+
+export function getGraphData() {
+  return graphData;
 }
 
 function computeGraphData(allActivities, before, after) {
@@ -62,7 +66,7 @@ function computeGraphData(allActivities, before, after) {
     dataObj.activities.push(activity);
     dataObj.effortLevel += getEffortLevel(activity);
   });
-  console.log('dayWiseData', dayWiseData);
+  return dayWiseData;
 }
 
 function getEffortLevel(activity) {

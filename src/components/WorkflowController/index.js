@@ -7,7 +7,7 @@ import Graph from '../Graph';
 
 export default function WorkflowController(props) {
   const athlete = getAthlete();
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(athlete == null ? 1 : 2);
   return (
     <>
       <ProgressSteps step={step} />
