@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/strava-github-like-graph/static/css/main.e40b013e.chunk.css",
+    "main.js": "/strava-github-like-graph/static/js/main.aa30c740.chunk.js",
+    "main.js.map": "/strava-github-like-graph/static/js/main.aa30c740.chunk.js.map",
+    "runtime-main.js": "/strava-github-like-graph/static/js/runtime-main.853c8b55.js",
+    "runtime-main.js.map": "/strava-github-like-graph/static/js/runtime-main.853c8b55.js.map",
+    "static/js/2.a97b84df.chunk.js": "/strava-github-like-graph/static/js/2.a97b84df.chunk.js",
+    "static/js/2.a97b84df.chunk.js.map": "/strava-github-like-graph/static/js/2.a97b84df.chunk.js.map",
+    "index.html": "/strava-github-like-graph/index.html",
+    "precache-manifest.28a03109e8715375aa11a2b78ca01f01.js": "/strava-github-like-graph/precache-manifest.28a03109e8715375aa11a2b78ca01f01.js",
+    "service-worker.js": "/strava-github-like-graph/service-worker.js",
+    "static/css/main.e40b013e.chunk.css.map": "/strava-github-like-graph/static/css/main.e40b013e.chunk.css.map",
+    "static/js/2.a97b84df.chunk.js.LICENSE.txt": "/strava-github-like-graph/static/js/2.a97b84df.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/strava-github-like-graph/static/media/logo.52946ee0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.853c8b55.js",
+    "static/js/2.a97b84df.chunk.js",
+    "static/css/main.e40b013e.chunk.css",
+    "static/js/main.aa30c740.chunk.js"
+  ]
+}
