@@ -101,7 +101,7 @@ function initializeEmptyDataSctructure(before, after) {
   today.setHours(0);
   const dayWiseData = {};
   for (; today.getTime() / 1000 > after; today.setDate(today.getDate() - 1)) {
-    dayWiseData[today.toISOString().split('T')[0]] = {};
+    dayWiseData[today.toLocaleString('sv').split(' ')[0]] = {};
   }
   return dayWiseData;
 }
