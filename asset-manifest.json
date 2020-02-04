@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/strava-github-like-graph/static/css/main.e40b013e.chunk.css",
-    "main.js": "/strava-github-like-graph/static/js/main.8ecab27f.chunk.js",
-    "main.js.map": "/strava-github-like-graph/static/js/main.8ecab27f.chunk.js.map",
+    "main.css": "/strava-github-like-graph/static/css/main.9e843753.chunk.css",
+    "main.js": "/strava-github-like-graph/static/js/main.da22581b.chunk.js",
+    "main.js.map": "/strava-github-like-graph/static/js/main.da22581b.chunk.js.map",
     "runtime-main.js": "/strava-github-like-graph/static/js/runtime-main.853c8b55.js",
     "runtime-main.js.map": "/strava-github-like-graph/static/js/runtime-main.853c8b55.js.map",
-    "static/js/2.85cfba3c.chunk.js": "/strava-github-like-graph/static/js/2.85cfba3c.chunk.js",
-    "static/js/2.85cfba3c.chunk.js.map": "/strava-github-like-graph/static/js/2.85cfba3c.chunk.js.map",
+    "static/js/2.916fa94a.chunk.js": "/strava-github-like-graph/static/js/2.916fa94a.chunk.js",
+    "static/js/2.916fa94a.chunk.js.map": "/strava-github-like-graph/static/js/2.916fa94a.chunk.js.map",
     "index.html": "/strava-github-like-graph/index.html",
-    "precache-manifest.15ee392719c4381db5d09c5f2918bdc4.js": "/strava-github-like-graph/precache-manifest.15ee392719c4381db5d09c5f2918bdc4.js",
+    "precache-manifest.730c8553e7c0c3d01e0681c91545ea14.js": "/strava-github-like-graph/precache-manifest.730c8553e7c0c3d01e0681c91545ea14.js",
     "service-worker.js": "/strava-github-like-graph/service-worker.js",
-    "static/css/main.e40b013e.chunk.css.map": "/strava-github-like-graph/static/css/main.e40b013e.chunk.css.map",
-    "static/js/2.85cfba3c.chunk.js.LICENSE.txt": "/strava-github-like-graph/static/js/2.85cfba3c.chunk.js.LICENSE.txt",
+    "static/css/main.9e843753.chunk.css.map": "/strava-github-like-graph/static/css/main.9e843753.chunk.css.map",
+    "static/js/2.916fa94a.chunk.js.LICENSE.txt": "/strava-github-like-graph/static/js/2.916fa94a.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/strava-github-like-graph/static/media/logo.52946ee0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.853c8b55.js",
-    "static/js/2.85cfba3c.chunk.js",
-    "static/css/main.e40b013e.chunk.css",
-    "static/js/main.8ecab27f.chunk.js"
+    "static/js/2.916fa94a.chunk.js",
+    "static/css/main.9e843753.chunk.css",
+    "static/js/main.da22581b.chunk.js"
   ]
 }
