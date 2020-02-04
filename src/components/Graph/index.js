@@ -2,13 +2,16 @@ import React from 'react';
 import cx from 'classnames';
 import GraphNode from './GraphNode';
 import Typography from 'antd/es/typography';
+import Avatar from 'antd/es/avatar';
 import MonthNode from './MonthNode';
 
 import styles from './styles.module.css';
+import {getAthlete} from '../../commons/strava-utils';
 
 const {Text} = Typography;
 
 export default function Graph({data}) {
+  const athlete = getAthlete();
   const days = Object.keys(data).reverse();
   const monthRunner = new Date(days[0]);
   const months = Array.from(Array(12)).map(() => {
@@ -27,6 +30,13 @@ export default function Graph({data}) {
   return (
     <>
       <div className={cx(styles.container, 'top-space-medium')}>
+        <div className={cx(styles.userInfoContainer)}>
+          <Avatar src={athlete.profile} className={cx(styles.userAvatar)} />
+          <div className={cx(styles.userBasicInfo)}>
+            <Text strong>{`${athlete.firstname} ${athlete.lastname}`}</Text>
+            <Text className={cx(styles.userCity)}>{`${athlete.city}`}</Text>
+          </div>
+        </div>
         <div>
           <Text>{activitiesCount} activities in the last year</Text>
         </div>

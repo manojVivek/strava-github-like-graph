@@ -26,3 +26,25 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.userInfoContainer {
+  justify-content: left;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.userAvatar {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.userBasicInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userCity {
+  font-size: 12px;
+}
