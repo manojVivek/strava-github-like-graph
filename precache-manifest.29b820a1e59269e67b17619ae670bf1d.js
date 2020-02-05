@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "987e9bc6f2bc90fa5135dd5e96835736",
+    "revision": "dca08f494b326afee3daa616d0904ac1",
     "url": "/strava-github-like-graph/index.html"
   },
   {
-    "revision": "61bf8aa483da2b5ceeb7",
+    "revision": "11e9725cd15d7df7d87c",
     "url": "/strava-github-like-graph/static/css/main.9e843753.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/strava-github-like-graph/static/js/2.916fa94a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "61bf8aa483da2b5ceeb7",
-    "url": "/strava-github-like-graph/static/js/main.da22581b.chunk.js"
+    "revision": "11e9725cd15d7df7d87c",
+    "url": "/strava-github-like-graph/static/js/main.18efa380.chunk.js"
   },
   {
     "revision": "517c8088388471fff231",
