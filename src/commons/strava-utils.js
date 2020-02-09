@@ -58,7 +58,11 @@ export function getGraphData() {
 function computeGraphData(allActivities, before, after) {
   const dayWiseData = initializeEmptyDataSctructure(before, after);
   allActivities.forEach(activity => {
-    const dataObj = dayWiseData[activity.start_date_local.split('T')[0]];
+    let dataObj = dayWiseData[activity.start_date_local.split('T')[0]];
+    if (!dataObj) {
+      dataObj = {};
+      dayWiseData[activity.start_date_local.split('T')[0]] = dataObj;
+    }
     if (!dataObj.activities) {
       dataObj.activities = [];
       dataObj.effortLevel = 0;
