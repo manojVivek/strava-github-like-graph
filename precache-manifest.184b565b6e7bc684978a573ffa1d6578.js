@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dca08f494b326afee3daa616d0904ac1",
+    "revision": "5af8c948715d0bc479096cd3afd555fa",
     "url": "/strava-github-like-graph/index.html"
   },
   {
