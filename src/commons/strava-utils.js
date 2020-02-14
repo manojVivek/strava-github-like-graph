@@ -83,7 +83,8 @@ function getEffortLevel(activity) {
     case 'Walk':
       return distanceBasedEffort(activity.distance, 7500, distanceTolerance);
     default:
-      return 0;
+      // Considering the effort is 1.5 for any other activity
+      return 1.5;
   }
 }
 
