@@ -29,7 +29,10 @@ export default function GraphNode({activities, effortLevel, day}) {
     >
       <div
         className={cx(styles.node)}
-        style={{backgroundColor: effortToColor[effortLevel] || '#efefef'}}
+        style={{
+          backgroundColor:
+            effortToColor[effortLevel > 5 ? 5 : effortLevel] || '#efefef',
+        }}
       ></div>
     </Tooltip>
   );
