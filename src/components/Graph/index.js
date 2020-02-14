@@ -34,7 +34,9 @@ export default function Graph({data}) {
           <Avatar src={athlete.profile} className={cx(styles.userAvatar)} />
           <div className={cx(styles.userBasicInfo)}>
             <Text strong>{`${athlete.firstname} ${athlete.lastname}`}</Text>
-            <Text className={cx(styles.userCity)}>{`${athlete.city}`}</Text>
+            <Text
+              className={cx(styles.userCity)}
+            >{`${athlete.city}, ${athlete.country}`}</Text>
           </div>
         </div>
         <div>
