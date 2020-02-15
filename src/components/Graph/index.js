@@ -45,7 +45,7 @@ export default function Graph({data}) {
         <div className={cx(styles.graphContainer)}>
           <div className={cx(styles.monthRunner)}>
             {months.map(month => (
-              <MonthNode month={month} />
+              <MonthNode month={month} key={month} />
             ))}
           </div>
           <div className={cx(styles.graph)}>

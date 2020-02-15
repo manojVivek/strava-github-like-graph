@@ -33,8 +33,9 @@ export async function completeAuthentication(code) {
 export async function processActivitiesData() {
   const per_page = 50;
   const before = Math.floor(new Date().getTime() / 1000);
-  const after =
+  const oneYearBack =
     before - 60 /*secs*/ * 60 /*mins*/ * 24 /* hours*/ * 365; /*days*/
+  const after = roundToPreviousSunday(oneYearBack);
   let page = 1;
   let currentBatch = [];
   let allActivities = [];
@@ -49,6 +50,14 @@ export async function processActivitiesData() {
     page++;
   } while (currentBatch.length === per_page);
   graphData = computeGraphData(allActivities, before, after);
+}
+
+export function roundToPreviousSunday(epochSecs) {
+  const date = new Date(epochSecs * 1000);
+  while (date.getDay() !== 0) {
+    date.setDate(date.getDate() - 1);
+  }
+  return date.getTime() / 1000;
 }
 
 export function getGraphData() {
@@ -100,13 +109,23 @@ function distanceBasedEffort(distance, slabDistance, tolerance) {
 
 function initializeEmptyDataSctructure(before, after) {
   const today = new Date(before * 1000);
-  today.setMilliseconds(0);
-  today.setSeconds(0);
-  today.setMinutes(0);
-  today.setHours(0);
+  normalizeDateToDay(today);
   const dayWiseData = {};
-  for (; today.getTime() / 1000 > after; today.setDate(today.getDate() - 1)) {
+  const afterDate = new Date(after * 1000);
+  normalizeDateToDay(afterDate);
+  for (
+    ;
+    today.getTime() >= afterDate.getTime();
+    today.setDate(today.getDate() - 1)
+  ) {
     dayWiseData[today.toLocaleString('sv').split(' ')[0]] = {};
   }
   return dayWiseData;
+}
+
+function normalizeDateToDay(date) {
+  date.setMilliseconds(0);
+  date.setSeconds(0);
+  date.setMinutes(0);
+  date.setHours(0);
 }
