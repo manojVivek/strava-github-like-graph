@@ -12,20 +12,30 @@ const effortToColor = {
   1: '#F9DACC',
 };
 
-export default function GraphNode({activities, effortLevel, day}) {
+export default function GraphNode({
+  activities,
+  effortLevel,
+  day,
+  disableHoverInfo,
+}) {
   return (
     <Tooltip
       mouseLeaveDelay={0}
       mouseEnterDelay={0.05}
-      title={`${
-        activities
-          ? `${activities.length} activit${
-              activities.length === 1 ? 'y' : 'ies'
-            } of ${Math.round(
-              activities.reduce((acc, val) => (acc += val.distance), 0) / 1000
-            )}kms`
-          : 'No activities'
-      } on ${day}`}
+      title={
+        disableHoverInfo
+          ? null
+          : `${
+              activities
+                ? `${activities.length} activit${
+                    activities.length === 1 ? 'y' : 'ies'
+                  } of ${Math.round(
+                    activities.reduce((acc, val) => (acc += val.distance), 0) /
+                      1000
+                  )}kms`
+                : 'No activities'
+            } on ${day}`
+      }
     >
       <div
         className={cx(styles.node)}
