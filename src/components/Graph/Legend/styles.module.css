@@ -1,0 +1,11 @@
+.legend {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.labelText {
+  font-size: 10px;
+  margin: 0 8px;
+}
