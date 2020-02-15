@@ -8,6 +8,7 @@ import MonthNode from './MonthNode';
 import styles from './styles.module.css';
 import {getAthlete} from '../../commons/strava-utils';
 import DayNode from './DayNode';
+import Legend from './Legend';
 
 const {Text} = Typography;
 
@@ -15,11 +16,18 @@ export default function Graph({data}) {
   const athlete = getAthlete();
   const days = Object.keys(data).reverse();
   const monthRunner = new Date(days[0]);
+  const now = new Date();
   const months = Array.from(Array(12)).map(() => {
     const month = monthRunner.toLocaleString('default', {month: 'short'});
     monthRunner.setMonth(monthRunner.getMonth() + 1);
     return month;
   });
+  if (now.getDate() > 14) {
+    months.push(months[0]);
+  }
+  if (now.getDate() > 21) {
+    months.shift();
+  }
   const activitiesCount = React.useMemo(
     () =>
       Object.keys(data).reduce(
@@ -44,22 +52,30 @@ export default function Graph({data}) {
           <Text>{activitiesCount} activities in the last year</Text>
         </div>
         <div className={cx(styles.graphContainer)}>
-          <div className={cx(styles.dayRunner)}>
-            {['Mon', 'Wed', 'Fri'].map(day => (
-              <DayNode day={day} key={day} />
-            ))}
+          <div className={cx(styles.graphSection)}>
+            <div className={cx(styles.dayRunner)}>
+              {['Mon', 'Wed', 'Fri'].map(day => (
+                <DayNode day={day} key={day} />
+              ))}
+            </div>
+            <div>
+              <div
+                className={cx(styles.monthRunner)}
+                style={{padding: months.length > 12 ? 0 : '0 16px'}}
+              >
+                {months.map(month => (
+                  <MonthNode month={month} key={month} />
+                ))}
+              </div>
+              <div className={cx(styles.graph)}>
+                {days.map(day => (
+                  <GraphNode {...data[day]} key={day} day={day} />
+                ))}
+              </div>
+            </div>
           </div>
-          <div>
-            <div className={cx(styles.monthRunner)}>
-              {months.map(month => (
-                <MonthNode month={month} key={month} />
-              ))}
-            </div>
-            <div className={cx(styles.graph)}>
-              {days.map(day => (
-                <GraphNode {...data[day]} key={day} day={day} />
-              ))}
-            </div>
+          <div className={cx(styles.row)}>
+            <Legend />
           </div>
         </div>
       </div>

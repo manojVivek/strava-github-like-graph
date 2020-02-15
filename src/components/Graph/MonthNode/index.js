@@ -9,7 +9,7 @@ const {Text} = Typography;
 export default function MonthNode({month}) {
   return (
     <div className={cx(styles.monthNode)}>
-      <Text>{month}</Text>
+      <Text className={cx(styles.monthText)}>{month}</Text>
     </div>
   );
 }
