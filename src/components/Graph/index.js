@@ -7,6 +7,7 @@ import MonthNode from './MonthNode';
 
 import styles from './styles.module.css';
 import {getAthlete} from '../../commons/strava-utils';
+import DayNode from './DayNode';
 
 const {Text} = Typography;
 
@@ -43,15 +44,22 @@ export default function Graph({data}) {
           <Text>{activitiesCount} activities in the last year</Text>
         </div>
         <div className={cx(styles.graphContainer)}>
-          <div className={cx(styles.monthRunner)}>
-            {months.map(month => (
-              <MonthNode month={month} key={month} />
+          <div className={cx(styles.dayRunner)}>
+            {['Mon', 'Wed', 'Fri'].map(day => (
+              <DayNode day={day} key={day} />
             ))}
           </div>
-          <div className={cx(styles.graph)}>
-            {days.map(day => (
-              <GraphNode {...data[day]} key={day} day={day} />
-            ))}
+          <div>
+            <div className={cx(styles.monthRunner)}>
+              {months.map(month => (
+                <MonthNode month={month} key={month} />
+              ))}
+            </div>
+            <div className={cx(styles.graph)}>
+              {days.map(day => (
+                <GraphNode {...data[day]} key={day} day={day} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
