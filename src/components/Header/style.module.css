@@ -1,11 +1,26 @@
 .header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   max-width: calc(100% - 100px);
   align-items: center;
-  margin: 10px auto 100px;
+  margin: 10px auto 50px;
 }
 
 .logoImage {
   height: 100px;
+}
+
+.aboutSection {
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.iconContainer {
+  height: fit-content;
+}
+
+.icon {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.65);
 }
