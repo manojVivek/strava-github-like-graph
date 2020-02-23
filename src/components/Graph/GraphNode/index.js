@@ -17,6 +17,7 @@ export default function GraphNode({
   effortLevel,
   day,
   disableHoverInfo,
+  setSelectedDay,
 }) {
   return (
     <Tooltip
@@ -43,6 +44,7 @@ export default function GraphNode({
           backgroundColor:
             effortToColor[effortLevel > 5 ? 5 : effortLevel] || '#efefef',
         }}
+        onClick={setSelectedDay && (() => setSelectedDay(day))}
       ></div>
     </Tooltip>
   );

@@ -18,6 +18,10 @@ code {
   margin-top: 50px;
 }
 
+.bottom-space-small {
+  margin-bottom: 25px;
+}
+
 .theme-color {
   color: #e34402 !important;
 }
